@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bed Demo </title>
+    <link rel="stylesheet" href="/src/tail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <style>
+        #webgi-canvas{
+            cursor: grab;
+            
+        }
+        #webgi-canvas:active{
+            cursor: grabbing;
+        }
+
+    
+        ar-button {
+            position: absolute;
+            bottom: 3rem;
+            left: 3rem;
+            transform: translate(-50%,-50%);
+
+  display: flex ;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 100px;
+}
+
+ar-button:before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a4a4a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3'%3E%3C/path%3E%3C/svg%3E");
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+
+ar-button:hover {
+  background-color: #f5f5f5;
+}
+
+ar-button:active {
+  background-color: #eeeeee;
+}
+
+ar-button > a,
+ar-button > a:hover {
+  color: inherit;
+  text-decoration: inherit;
+}
+    </style>
+</head>
+
+<body>
+    
+
+<ar-button
+src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/bed_m000-23.glb?v=1693906421891"
+ios-src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/gltf-1693921263550-827080480.usdz?v=1693921290981"
+
+title="A 3D model of an astronaut">
+  AR
+</ar-button>
+
+
+    <canvas id="webgi-canvas" class="w-screen h-screen"></canvas>
+
+
+<img src="/assets/icons/logo.png" class="h-16 absolute left-1/2 top-16 translate-x-[-50%]"  alt="">
+
+
+
+
+
+    <div data-dial-init class="fixed right-6 bottom-6 group">
+        <div id="speed-dial-menu-vertical" class="flex flex-col hidden items-center  mb-4 space-y-2">
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #3F2A14;">
+        
+                
+            </button>
+            <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Mocha Elegance
+
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share1" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #464646;">
+        
+                
+            </button>
+            <div id="tooltip-share1" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Charcoal Serenity
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share2" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #000000">
+        
+               
+            </button>
+            <div id="tooltip-share2" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Obsidian Black
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share3" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #001f3f;">
+        
+           
+            </button>
+            <div id="tooltip-share3" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Navy Velvet
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share4" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #708D78;">
+        
+                <span class="sr-only">Obsidian Black</span>
+            </button>
+            <div id="tooltip-share4" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Sage Tranquility
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+
+
+
+
+
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <button type="button" data-dial-toggle="speed-dial-menu-vertical" aria-controls="speed-dial-menu-vertical" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+       
+
+            <svg class="w-6 h-6 transition-transform group-hover:rotate-[135deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="m13.835 7.578-.005.007-7.137 7.137 2.139 2.138 7.143-7.142-2.14-2.14Zm-10.696 3.59 2.139 2.14 7.138-7.137.007-.005-2.141-2.141-7.143 7.143Zm1.433 4.261L2 12.852.051 18.684a1 1 0 0 0 1.265 1.264L7.147 18l-2.575-2.571Zm14.249-14.25a4.03 4.03 0 0 0-5.693 0L11.7 2.611 17.389 8.3l1.432-1.432a4.029 4.029 0 0 0 0-5.689Z"/>
+            </svg>
+            <span class="sr-only">Open actions menu</span>
+        </button>
+    </div>
+    
+
+
+
+    <div class="flex items-center fixed right-24 bottom-10">
+        <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="checked-checkbox" class="ml-2 text-xl font-semibold  text-gray-900 dark:text-gray-300">Auto Rotate</label>
+    </div>
+
+
+
+
+
+
+    <script type="module">
+          import "@leoncvlt/ar-button"
+
+        import {
+    ViewerApp,
+    AssetManagerPlugin,
+    GBufferPlugin,
+    timeout,
+    ProgressivePlugin,
+    TonemapPlugin,
+    SSRPlugin,
+    SSAOPlugin,
+    DiamondPlugin,
+    FrameFadePlugin,
+    GLTFAnimationPlugin,
+    GroundPlugin,
+    BloomPlugin,
+    TemporalAAPlugin,
+    AnisotropyPlugin,
+    GammaCorrectionPlugin,
+    Object3D, Material, 
+    Vector3, Vector2, 
+    Texture,
+
+    addBasePlugins,
+     TweakpaneUiPlugin, AssetManagerBasicPopupPlugin, CanvasSnipperPlugin, MeshStandardMaterial,
+
+   
+
+    // Color, // Import THREE.js internals
+    // Texture, // Import THREE.js internals
+} from "webgi";
+
+
+async function setupViewer(){
+
+    // Initialize the viewer
+    const viewer = new ViewerApp({
+        canvas: document.getElementById('webgi-canvas'),
+    })
+
+    // Add some plugins
+    const manager = await viewer.addPlugin(AssetManagerPlugin)
+
+    // Add a popup(in HTML) with download progress when any asset is downloading.
+    await viewer.addPlugin(AssetManagerBasicPopupPlugin)
+
+    // Add plugins individually.
+    // await viewer.addPlugin(GBufferPlugin)
+    // await viewer.addPlugin(new ProgressivePlugin(32))
+    // await viewer.addPlugin(new TonemapPlugin(!viewer.useRgbm))
+    // await viewer.addPlugin(GammaCorrectionPlugin)
+    // await viewer.addPlugin(SSRPlugin)
+    // await viewer.addPlugin(SSAOPlugin)
+    // await viewer.addPlugin(DiamondPlugin)
+    // await viewer.addPlugin(FrameFadePlugin)
+    // await viewer.addPlugin(GLTFAnimationPlugin)
+    // await viewer.addPlugin(GroundPlugin)
+    // await viewer.addPlugin(BloomPlugin)
+    // await viewer.addPlugin(TemporalAAPlugin)
+    // await viewer.addPlugin(AnisotropyPlugin)
+    // and many more...
+
+    // or use this to add all main ones at once.
+    await addBasePlugins(viewer)
+
+    // Add more plugins not available in base, like CanvasSnipperPlugin which has helpers to download an image of the canvas.
+    await viewer.addPlugin(CanvasSnipperPlugin)
+
+    // This must be called once after all plugins are added.
+    viewer.renderer.refreshPipeline()
+
+
+    let url =new URL( './public/bed.glb', import.meta.url );
+    url = "" + url;
+  
+    
+    const model = await viewer.load(url)
+    const object3d = model.modelObject;
+
+
+
+
+
+    const Colors = document.querySelectorAll(".bodycolor");
+
+const object = viewer.scene.findObjectsByName('bodymaterial')[0].modelObject
+// console.log(object)
+let obj = viewer.createPhysicalMaterial({
+                color: 0x3F2A14,
+                roughness: 0.5,
+                matalness : 0.4,
+             
+            })
+        
+            object.setMaterial(obj)
+
+for (const color of Colors) {
+    color.addEventListener('click', (e) => {
+        const backgroundColor = window.getComputedStyle(color).backgroundColor;
+     
+
+        // console.log(object, backgroundColor);
+
+        // console.log(startMaterial)
+    
+             obj = viewer.createPhysicalMaterial({
+                color: backgroundColor.toString(),
+                roughness: 0.5,
+                matalness : 0.4,
+             
+            })
+           
+            object.setMaterial(obj)
+
+            console.log(object.material)
+
+         
+        
+    });
+}
+
+
+ 
+ // Function to adjust the object's properties based on screen width
+
+// Initial adjustment
+// adjustObjectProperties();
+
+// Listen for window resize events and adjust object properties accordingly
+// window.addEventListener('resize', adjustObjectProperties);
+//   Camera 
+
+
+const controls = viewer.scene.activeCamera.controls;
+controls.maxDistance = 20
+controls.autoRotate=true
+
+const rotateCheckbox = document.getElementById("checked-checkbox"); // Make sure to replace "rotateCheckbox" with your actual element ID.
+
+rotateCheckbox.addEventListener("input", (e) => {
+  if (rotateCheckbox.checked) { // Check the checked property of the checkbox element
+    controls.autoRotate = true;
+  } else {
+    controls.autoRotate = false;
+  }
+  console.log("INPUT");
+});
+
+
+
+function update() {
+    window.requestAnimationFrame(update)
+    viewer.setDirty()
+}
+
+update()
+
+
+
+}
+
+setupViewer()
+
+    </script>
+    
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+</html>

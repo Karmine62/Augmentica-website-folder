@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Augmentica</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="/src/styles.css">
+	<link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+	<style>
+		@-webkit-keyframes bg-slider {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -19255px 0;
+  }
+}
+
+@keyframes bg-slider {
+  0% {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -19255px 0;
+  }
+}
+
+/** ---------- MOVING LOGOS ----------  */
+.moving-logos-content {
+  width: 100%;
+  height: 200px;
+  animation: bg-slider 90s linear infinite;
+  background: url("https://cdn.glitch.global/b0fead90-5bbf-4814-b997-c1421d53818f/bannerlogos.png?v=1697468274035")
+    repeat-x 100%;
+  background-size: auto 200px;
+}
+
+	</style>
+	
+</head>
+
+<body>
+
+<div class="trigger"></div>
+<div class="trigger1"></div>
+
+
+
+
+
+<!-- NAVBAR /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+
+
+<div class="bg-[#F7F4F2] shadow-2xl w-full lg:w-screen flex-wrap lg:flex py-2 px-5 lg:px-12 flex-col lg:flex-row items-center  fixed z-40">
+	<div class="flex items-center justify-between w-full lg:w-auto">
+	  <a class=" w-auto flex title-font font-medium items-center text-gray-900 mb-4 lg:mb-0">
+		<img class="lg:w-48 md:w-28 " src="./assets/icons/logo.png" width="200px" alt="">
+	  </a>
+	  <!-- Hamburger Menu Icon -->
+	  <div id="mobileMenuButton" class="lg:hidden cursor-pointer text-[#f78f53]">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+		  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+		</svg>
+	  </div>
+	</div>
+  
+	<nav id="mobileNav" class="lg:ml-auto hidden  flex-wrap  flex justify-center items-center  text-base  gap-5 xl:gap-10 md:gap-2 lg:flex">
+  
+  
+	  <a href="/index.html"><button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Home</button>
+	  </a>
+  
+  
+	  <!-- This is an example component -->
+	  <div class="max-w-lg mx-auto">
+  
+  
+  
+  
+		<button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+		  </svg></button>
+  
+		<!-- Dropdown menu -->
+		<div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+  
+		  <ul class="py-1" aria-labelledby="dropdown">
+			<li>
+			  <a href="/services.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Overview</a>
+			</li>
+			<li>
+			  <a href="/3dconfig.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+				Configurators</a>
+			</li>
+			<li>
+			  <a href="/3dvisual.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+				Visualization</a>
+			</li>
+			<li>
+			  <a href="/ar.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Augmented Reality</a>
+			</li>
+			<li>
+			  <a href="/ai.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Artificial
+				Intelligence</a>
+			</li>
+		  </ul>
+		</div>
+  
+	  </div>
+	  <div class="max-w-lg mx-auto">
+  
+  
+		<button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown2">Resources <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+		  </svg></button>
+  
+  
+	  <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown2">
+  
+	  <ul class="py-1" aria-labelledby="dropdown">
+	  
+		<a href="/faq.html#faq" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">FAQ</a>
+		</li>
+		<li>
+		<a href="/faq.html#otherservice" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">More Services</a>
+		</li>
+	  
+	  </ul>
+	  </div>
+  
+	  </div>
+  
+	  <div class="max-w-lg mx-auto">
+  
+	<a href="./benefits.html">   <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Benefits </button>
+  </a> 
+   
+  
+	  </div>
+	  <div class="max-w-lg mx-auto">
+  
+	 <a href="./process.html">  <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Process</button>
+   </a> 
+		<!-- Dropdown menu -->
+	
+  
+	  </div>
+	  <a href="/demo.html" class="mr-3 md:mr-5 cursor-pointer text-[#004586] font-semibold hover:text-gray-900">Demo
+		Gallery</a>
+  
+  
+	  <a href="/contact.html"> <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Contact</button>
+	  </a>
+  
+  <a href="./survey.html">
+	  <button class="inline-flex items-center bg-[#FE8E5C] shadow-lg font-semibold text-white transition-all border-0 py-3 px-6 md:px-9 focus:outline-none hover:bg-gray-200 rounded-xl text-base mt-4 md:mt-0">GET
+		  PRICING</button>
+		</a>
+		</nav>
+  </div>
+	
+
+<!-- Home First Section /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+
+	<div class="  w-screen h-screen absolute flex flex-row mt-10 md:mt-0  gap-y-16  items-center  justify-around gap-x-24 flex-wrap">
+
+
+		<div class=" text-center   md:w-1/2  md:text-left   ">
+
+
+			<h1 class="  text-5xl md:text-6xl font-bold text-white  ">Future-Proofing Your E-commerce Business with AR & AI Solutions</h1>
+			<p class="text-white text-xl my-8">Augmentica is your gateway to transformative AR and AI solutions. Step into the future of business with our cutting-edge technology. We bring immersive experiences to customers, giving you a competitive advantage in a crowded market</p>
+		<a href="./survey.html">	<button
+				class="text-white font-semibold text-2xl py-4 px-7 transition-all rounded-xl bg-green-400 hover:bg-red-400">Take Our Survey</button>
+			</a>
+				
+
+		</div>
+
+		<div class="btn flex gap-x-6 mt-10 md:mt-0  md:flex-col md:gap-y-8     ">
+			<button class=" cBtn  w-16 h-16 bg-orange-900 rounded-full outline outline-4 outline-white"></button>
+			<button class= " cBtn w-16 h-16 bg-cyan-900 rounded-full outline outline-4 outline-white"></button>
+			
+			<button class=" cBtn w-16 h-16 bg-[#36454F] rounded-full outline outline-4 outline-white"></button>
+		</div>
+	
+	</div>
+
+
+	<div id="webgi-canvas-container" class="flex justify-center items-center w-screen h-screen">
+	
+		<canvas id="webgi-canvas" class="w-full h-full"></canvas>
+
+	</div>
+
+
+<!-- Services 3D Configurator,Visualizer, Augemented Reality /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+
+
+
+
+
+
+
+<div  class="flex flex-col items-center w-screen  bg-gradient-to-r from-neutral-100 via-neutral-100 to-neutral-100 ">
+	<h1 class="text-4xl font-bold mt-10 text-center md:w-7/12 w-screen">Explore new horizons in AR and AI, we craft unforgettable customer experiences and boosting your stores conversion rates.</h1>
+
+
+
+	
+	<section data-aos="fade-right" class="text-gray-600 body-font">
+	
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">3D Product Configurator
+			
+			</h1>
+			<br>
+			<p class="mb-8 leading-relaxed">Assure your customers satisfaction with our 3D product customizers. Allow shoppers to personalize products in 3D, adjusting colors, materials, add-ons, and more. Experience unparalleled realism with lifelike 3D product models leading to increased order value and a reduction in returns, ensuring a seamless customer experience.</p>
+			<div class="flex justify-center">
+				<button class="inline-flex text-blue-700 hover:text-blue-400 text-lg">
+					<a href="3dconfig.html" class="no-underline">Learn More</a>
+				  </button>
+				  
+			  
+			</div>
+			
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/indexphoto1.png">
+		  </div>
+		</div>
+	</section>
+
+	  
+	<section data-aos="fade-left" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">3D Visualizer
+			
+			</h1>
+			<br>
+			<p class="mb-8 leading-relaxed">Provide your customers with indepth 3d product visualizations to highlight specific features, angles, add-ons, and more. These detailed 3D representations not only showcase the unique attributes of your products but also facilitate a deeper understanding of their functionality and aesthetics</p>
+			
+			
+			<div class="flex justify-center mt-3">
+				<button class="inline-flex text-blue-700 hover:text-blue-400 text-lg">
+					<a href="3dvisual.html" class="no-underline">Learn More</a>
+				  </button>			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/indexphoto2.png">
+		  </div>
+		</div>
+	  </section>
+
+
+
+
+	  <section data-aos="fade-right" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">Augmented Reality
+			
+			</h1>
+			<br>
+			<p class="mb-3 ">Enable your customers to view and try on products in augmented reality, creating engaging and immersive experiences that instill increased confidence when making a purchase.</p>
+			<p class="mb-8 leading-relaxed">This hands-on experience not only helps customers make more informed decisions but also ensures that the product they choose is perfectly fit for their needs and preferences.</p>
+			<p>With augmented reality, you can visualize and interact with our products like never before, making the customer's shopping experience both exciting and informative.</p>
+			<br>
+			<div class="flex justify-center">
+				<button class="inline-flex text-blue-700 hover:text-blue-400 text-lg">
+					<a href="ar.html" class="no-underline">Learn More</a>
+				  </button>			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/ar.webp">
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+	  
+	  
+	</div>
+
+
+	<!-- Logo Cloud Animation /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+	<div class="flex justify-center items-center bg-gradient-to-tl via-white to-stone-200  py-16">
+		<div class="moving-logos-content reveal"></div>
+	</div>
+
+
+	<!-- 3D Product Stats, Use Cases, Quality /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+	<div class="flex flex-col items-center w-screen   my-8 ">
+
+
+
+	  <section data-aos="fade-up" class="text-gray-600 body-font rounded-3xl bg-slate-100">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-semibold text-blue-900">Chatbots
+			
+			</h1> 
+			<p class="my-8 font-semibold  text-blue-900">Establish connection with your customers through our store trained chatbots</p>
+			
+			
+			
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				24/7 Customer Support providing round-the-clock customer support, answering queries, resolving issues, and assisting with product information, order tracking, and more,
+			</p>
+			
+
+
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Use data and interactions to provide personalized product recommendations, enhancing the shopping experience and increasing conversion rates. 
+			</p>
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Chatbots provide instant responses, reducing customer wait times and allowing human agents to concentrate on complex issues, enhancing service efficiency.
+			</p>
+			<div class="flex justify-center mt-3">
+				<button class="inline-flex text-blue-700 hover:text-blue-400 text-lg">
+					<a href="ai.html#chatbot" class="no-underline">Learn More</a>
+				  </button>			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded" alt="hero" src="/assets/images/indexchatbot2.jpg">
+		  </div>
+		</div>
+	  </section>
+
+
+	  <section data-aos="fade-down" class="text-gray-600 body-font rounded-3xl mt-12 bg-blue-100 ">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-semibold text-blue-900">AI Automation
+			
+			</h1> 
+			<p class="my-8 font-semibold  text-blue-900">Streamline your business efficiency through task automation and personalized CRM dashboards.</p>
+			
+			
+			
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				AI automation streamlines repetitive tasks, enabling staff to focus on strategic initiatives for improved operational efficiency.	
+			</p>
+			
+
+
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Simplify data processing tasks, enabling your businesses to gather valuable insights from large datasets quickly and make data-driven decisions.
+			</p>
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				
+				By automating various processes, businesses can reduce operational costs, allocate resources more effectively, and maintain a competitive edge in the market.
+			</p>
+			<div class="flex justify-center mt-3">
+			  <button class="inline-flex text-blue-700  hover:text-blue-400  text-lg"><a href="ai.html#ai-btnpath" class="no-underline">Learn More</a>
+			  </button>
+			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded" alt="hero" src="./assets/images/indexaiautoph.jpg">
+		  </div>
+		</div>
+	  </section>
+
+
+
+
+	  <section data-aos="fade-up" class="text-gray-600 body-font rounded-3xl mt-12 bg-slate-100">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-semibold text-blue-900">Computer Vision
+			</h1> 
+			<p class="my-8 font-semibold  text-blue-900">Modernize your business by using computer vision technology to automatically analyze images, maintain quality, and provide valuable insights.</p>
+			
+			
+			
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Monitor employee efficiency and performance by analyzing work patterns and providing insights for process optimization.
+			</p>
+			
+
+
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Train cameras to detect customer shopping patterns, allowing businesses to gain insights into customer behavior, detect anomalies, and optimize store layouts.
+			</p>
+			<p class="mb-8 leading-relaxed flex items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+				</svg>
+				Streamline inventory tracking by using computer vision to automatically count and monitor stock levels, reducing inventory costs and preventing stockouts.
+			</p>
+			<div class="flex justify-center mt-3">
+			  <button class="inline-flex text-blue-700  hover:text-blue-400  text-lg"><a href="ai.html#cv-btnpath" class="no-underline">Learn More</a></button>
+			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded" alt="hero" src="assets/images/retail-demographics-people-shopping.jpg">
+		  </div>
+		</div>
+	</section>
+	
+	</div>
+
+
+	<!-- Demo Gallery 3 Images Section /////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////// -->
+
+
+<section class="text-gray-600 body-font bg-[#004586]">
+	<div class="container px-5 py-24 mx-auto flexc flex-wrap ">
+	  <div class="flex flex-col w-full mb-20 flex-wrap justify-between">
+		<h1 class="sm:text-3xl text-4xl  font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">Explore innovation in our Demo Gallery for a glimpse of what's possible!</h1>
+         <br>
+		<div>
+
+			
+			<a href="demo.html">
+			<button class="text-2xl text-white flex items-center py-4 px-5 border-solid border-2 rounded-md hover:bg-blue-900 ">
+				View All
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+				</svg>
+			</button>
+			</a>
+		</div>
+	  </div>
+	  <div class="flex flex-wrap ">
+		<div class="flex flex-wrap ">
+		  <div class="md:p-2 p-1 w-1/3">
+			<img alt="gallery" class="w-full object-cover h-full object-center block" src="assets/images/snapshot 1.png">
+		  </div>
+		  <div class="md:p-2 p-1 w-1/3">
+			<img alt="gallery" class="w-full object-cover h-full object-center block" src="assets/images/bag.png">
+		  </div>
+	
+		  <div class="md:p-2 p-1 w-1/3">
+		
+
+				<img alt="gallery" class="w-full object-cover h-full object-center block" src="assets\images\bed.png">
+			
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+
+
+
+	<script src="src/index.js" type="module"></script>
+	<script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script  src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
+	<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>

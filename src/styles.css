@@ -1,0 +1,60 @@
+
+
+@tailwind base;
+@tailwind components;
+
+
+
+
+body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  
+  margin: 0;
+  padding: 0;
+}
+#webgi-canvas {
+
+
+ /* z-index: -1; */
+}
+#webgi-canvas-container{
+
+  /* margin: 10vh 10vw; */
+  
+  background: #136a8a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.trigger{
+  position: absolute;
+  top: 100vh;
+ 
+  z-index: 100;
+}
+.trigger1{
+  position: absolute;
+  top: 130vh;
+
+  z-index: 100;
+}
+
+
+@tailwind utilities;
+
+
+body::-webkit-scrollbar {
+  width: 0.6em;
+}
+ 
+body::-webkit-scrollbar-track {
+ background-color: #FE8E5C;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: skyblue ;
+  outline: 0.5px solid rgb(41, 147, 252);
+}

@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Augmentica | Visualizer</title>
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./src/style.css">
+<link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+  <style>:not(:defined) > * {
+  display: none;
+}
+
+
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+model-viewer {
+  background-color: #fff;
+  width: 100%;
+  height: 90%;
+}
+
+.Hotspot {
+  box-sizing: border-box;
+  cursor: pointer;
+  background: #fff;
+  border: 0;
+  border-radius: 32px;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  transition: opacity .3s;
+  position: relative;
+  box-shadow: 0 2px 4px #00000040;
+}
+
+.Hotspot:not([data-visible]) {
+  box-shadow: none;
+  pointer-events: none;
+  background: none;
+  border: 4px solid #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.Hotspot:focus {
+  border: 4px solid #0080c8;
+  outline: none;
+  width: 32px;
+  height: 32px;
+}
+
+.Hotspot > * {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.HotspotAnnotation {
+  color: #000c;
+  overflow-wrap: break-word;
+  background: #fff;
+  border-radius: 4px;
+  width: max-content;
+  max-width: 128px;
+  padding: .5em 1em;
+  font-family: Futura, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1em);
+  box-shadow: 0 2px 4px #00000040;
+}
+
+.Hotspot:not([data-visible]) > * {
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .3s, opacity .3s;
+  transform: translateY(calc(4px - 50%));
+}
+
+.progress-bar {
+  background-color: #00000080;
+  border: 1px solid #ffffffe6;
+  border-radius: 25px;
+  width: 33%;
+  height: 10%;
+  max-height: 2%;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  box-shadow: 0 3px 10px 3px #00000080, 0 0 5px 1px #0009;
+}
+
+.progress-bar.hide {
+  visibility: hidden;
+  transition: visibility .3s;
+}
+
+.update-bar {
+  float: left;
+  background-color: #ffffffe6;
+  border-radius: 25px;
+  width: 0%;
+  height: 100%;
+  transition: width .3s;
+}
+
+</style>
+
+</head>
+
+<body>
+
+  <div class="bg-[#F7F4F2] shadow-2xl w-full lg:w-screen flex-wrap lg:flex py-2 px-5 lg:px-12 flex-col lg:flex-row items-center  fixed z-40">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+      <a class=" w-auto flex title-font font-medium items-center text-gray-900 mb-4 lg:mb-0">
+        <img class="lg:w-48 md:w-28 " src="./assets/icons/logo.png" width="200px" alt="">
+      </a>
+      <!-- Hamburger Menu Icon -->
+      <div id="mobileMenuButton" class="lg:hidden cursor-pointer text-[#f78f53]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+    </div>
+  
+    <nav id="mobileNav" class="lg:ml-auto hidden  flex-wrap  flex justify-center items-center  text-base  gap-5 xl:gap-10 md:gap-2 lg:flex">
+  
+  
+      <a href="/index.html"><button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Home</button>
+      </a>
+  
+  
+      <!-- This is an example component -->
+      <div class="max-w-lg mx-auto">
+  
+  
+  
+  
+        <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg></button>
+  
+        <!-- Dropdown menu -->
+        <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+  
+          <ul class="py-1" aria-labelledby="dropdown">
+            <li>
+              <a href="/services.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Overview</a>
+            </li>
+            <li>
+              <a href="/3dconfig.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+                Configurators</a>
+            </li>
+            <li>
+              <a href="/3dvisual.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+                Visualization</a>
+            </li>
+            <li>
+              <a href="/ar.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Augmented Reality</a>
+            </li>
+            <li>
+              <a href="/ai.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Artificial
+                Intelligence</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+      <div class="max-w-lg mx-auto">
+  
+  
+        <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown2">Resources <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg></button>
+  
+  
+      <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown2">
+  
+      <ul class="py-1" aria-labelledby="dropdown">
+      
+        <a href="/faq.html#faq" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">FAQ</a>
+        </li>
+        <li>
+        <a href="/faq.html#otherservice" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">More Services</a>
+        </li>
+      
+      </ul>
+      </div>
+  
+      </div>
+  
+      <div class="max-w-lg mx-auto">
+  
+    <a href="./benefits.html">   <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Benefits </button>
+  </a> 
+   
+  
+      </div>
+      <div class="max-w-lg mx-auto">
+  
+     <a href="./process.html">  <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Process</button>
+   </a> 
+        <!-- Dropdown menu -->
+    
+  
+      </div>
+      <a href="/demo.html" class="mr-3 md:mr-5 cursor-pointer text-[#004586] font-semibold hover:text-gray-900">Demo
+        Gallery</a>
+  
+  
+      <a href="/contact.html"> <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Contact</button>
+      </a>
+  
+  
+      <button class="inline-flex items-center bg-[#FE8E5C] shadow-lg font-semibold text-white transition-all border-0 py-3 px-6 md:px-9 focus:outline-none hover:bg-gray-200 rounded-xl text-base mt-4 md:mt-0"><a href="./survey.html"">GET PRICING</a></button>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <model-viewer> HTML element -->
+  <model-viewer src="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/camera_canon_eos_400d.glb?v=1696162054561" camera-controls="" poster="https://cdn.glitch.global/d3604814-c91b-4a08-b633-0908f5a48d9a/poster.webp?v=1696077334823" shadow-intensity="1" camera-orbit="47.8deg 80.8deg 10.86m" field-of-view="30deg">
+    <button class="Hotspot" slot="hotspot-1" data-position="-0.01442223521888858m 1.5932334442658067m 0.10696938329264816m" data-normal="8.188817075829803e-7m 0.9863361519615582m 0.1647452437340624m" data-visibility-attribute="visible">
+      <div class="HotspotAnnotation"> Canon EOS 400D</div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-0.15651250764660624m 0.35178914226426133m 2.2166107822226144m" data-normal="-0.09420483382795912m 0.17770626560291686m 0.9795641543303392m" data-visibility-attribute="visible">
+      <div class="HotspotAnnotation">Canon EF/EF-S</div>
+    </button><button class="Hotspot" slot="hotspot-3" data-position="-0.05432125317898573m 0.1910562496463945m -1.3180224299430838m" data-normal="0m 0m -1m" data-visibility-attribute="visible">
+      <div class="HotspotAnnotation"> 230K Dots</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+  </model-viewer>
+
+
+
+
+  <div class=" text-center translate-y-[-50%]  top-0 relative lg:absolute z-10  lg:top-[80vh] lg:left-8 lg:text-left  ">
+
+
+    <h1 class="  text-5xl md:text-6xl font-bold text-black  ">Sharper Visuals, Smoother Shopping</h1>
+    <p class="text-black text-xl my-8">Deliver an engaging shopping experience by enabling your customers to explore the finer points of your products with 3D visualizers.</p>
+    <button class="text-white font-semibold text-2xl py-4 px-7 transition-all rounded-xl bg-green-400 hover:bg-red-400"><a href="demo.html" class="no-underline">Try Demos</a>
+    </button>
+
+
+
+  </div>
+
+
+
+
+
+  <section class="py-10  sm:py-16 lg:py-24">
+    <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8 ">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Statistically Proven Solutions</h2>
+        <p class="mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">Augmentica's solutions are statistically proven, backed by extensive research and data analysis, ensuring tangible benefits for your business</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 mt-10 text-center  lg:mt-24 sm:gap-x-8 md:grid-cols-2">
+        <div>
+          <h3 class="font-bold text-7xl">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600" data-counter-target="30" id="roi"> 4 </span><span class="text-3xl text-gray-900">x</span>
+          </h3>
+          <p class="mt-4 text-xl font-medium text-gray-900">More</p>
+          <p class="text-base mt-0.5 text-gray-500"> time spent with product</p>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-7xl">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-blue-600" data-counter-target="94" id="click-rate"> 94 </span><span class="text-3xl text-gray-900">%</span>
+          </h3>
+          <p class="mt-4 text-xl font-medium text-gray-900">Higher Click Through Rate</p>
+          <p class="text-base mt-0.5 text-gray-500">Than Before</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <section class="py-10 bg-gray-50 sm:py-16 lg:py-24">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Seamlessly Plug-In with Augmentica Across All E-commerce Platforms</h2>
+        <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600">Augmentica effortlessly integrates with a wide range of e-commerce platforms, ensuring compatibility and simplicity in enhancing your online store.</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 mt-12 lg:mt-16 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/shopify-logo.png" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">Shopify</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">Augmentica makes it a breeze to integrate our cutting-edge technologies into your Shopify store, transforming your e-commerce visions into reality without hassle.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="assets\images\woologo.jpg" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">WooCommerce</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="block w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">Augmentica's integration process with WooCommerce simplifies the implementation of our innovative solutions, 
+              bringing your e-commerce ideas to life effortlessly.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="assets\images\wixlogo.png" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">Wix</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">Seamlessly implement Augmentica's innovative solutions into your Wix online store, 
+              ensuring that your unique e-commerce ideas come to life with ease.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">Custom Website</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">Our web development services are designed to be adaptable, tailored to your specific needs, and can include 3D, AI, 
+              and AR solutions to provide an enhanced online experience.".</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">3D Model Creation</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">We specialize in creating hyper-realistic 3D models that accurately depict your products, enhancing your customer's shopping experience.</p>
+          </div>
+        </div>
+
+        <div class="overflow-hidden bg-white rounded shadow">
+          <div class="p-8">
+            <div class="flex items-center">
+              <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png" alt="">
+              <div class="ml-5 mr-auto">
+                <p class="text-xl font-semibold text-black">Maintenence</p>
+                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+              </div>
+              <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </div>
+            <p class="text-base leading-relaxed text-gray-600 mt-7">With our round-the-clock website maintenance, you can rest assured that your online storefront is continuously accessible and optimized for performance.</p>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+
+  <section class="text-gray-600 body-font bg-[#004586]">
+    <div class="container px-5 py-24 mx-auto flexc flex-wrap ">
+      <div class="flex flex-col w-full mb-20 flex-wrap justify-between">
+      <h1 class="sm:text-3xl text-4xl  font-medium title-font text-white lg:w-1/3 lg:mb-0 mb-4">Explore innovation in our Demo Gallery for a glimpse of what's possible!</h1>
+      <div>
+
+        
+        <a href="./demo.html">
+          <br>
+        <button class="text-2xl text-white flex items-center py-4 px-5 border-solid border-2 rounded-md hover:bg-blue-900 ">
+          View All
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+        </a>
+      </div>
+      </div>
+      <div class="flex flex-wrap ">
+      <div class="flex flex-wrap ">
+        <div class="md:p-2 p-1 w-1/3">
+        <img alt="gallery" class="w-full object-cover h-full object-center block" src="./assets/images/snapshot 1.png">
+        </div>
+        <div class="md:p-2 p-1 w-1/3">
+        <img alt="gallery" class="w-full object-cover h-full object-center block" src="./assets/images/bag.png">
+        </div>
+    
+        <div class="md:p-2 p-1 w-1/3">
+      
+
+          <img alt="gallery" class="w-full object-cover h-full object-center block" src="./assets\images\couch.png">
+        
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+
+
+
+
+  <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+<script src="./src/model-viewer.min.js"></script>
+<script src="./src/counter.min.js"></script>
+<script>
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mobileNav = document.getElementById("mobileNav");
+mobileMenuButton.addEventListener("click", ()=>{
+    mobileNav.classList.toggle("hidden");
+});
+
+new Counter('#roi');
+new Counter('#click-rate');
+
+</script>
+</body>
+
+</html>

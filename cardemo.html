@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car-Configurator Demo </title>
+    <link rel="stylesheet" href="/src/tail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <style>
+        #webgi-canvas{
+            cursor: grab;
+            
+        }
+        #webgi-canvas:active{
+            cursor: grabbing;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+
+    <canvas id="webgi-canvas" class="w-screen h-screen"></canvas>
+
+
+<img src="/assets/icons/logo.png" class="h-16 absolute left-1/2 top-16 translate-x-[-50%]"  alt="">
+
+
+
+
+    <div data-dial-init class="fixed right-6 bottom-6 group">
+        <div id="speed-dial-menu-vertical" class="flex flex-col hidden items-center  mb-4 space-y-2">
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #FF0000;">
+        
+                
+            </button>
+            <div id="tooltip-share" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Crimson Red
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share1" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #0000FF;">
+        
+                
+            </button>
+            <div id="tooltip-share1" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Sapphire Blue
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share2" data-tooltip-placement="left" class="  bodycolor  flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #C0C0C0;">
+        
+               
+            </button>
+            <div id="tooltip-share2" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Platinum Silver Metallic
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share3" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #FFFFFF;">
+        
+           
+            </button>
+            <div id="tooltip-share3" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Diamond White Pearl
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+            <button type="button" data-tooltip-target="tooltip-share4" data-tooltip-placement="left" class=" bodycolor   flex justify-center items-center w-[52px] h-[52px] rounded-full shadow-lg "  style="background-color: #000000;">
+        
+                <span class="sr-only">Obsidian Black</span>
+            </button>
+            <div id="tooltip-share4" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Obsidian Black
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+
+
+
+
+
+
+
+
+
+            
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <button type="button" data-dial-toggle="speed-dial-menu-vertical" aria-controls="speed-dial-menu-vertical" aria-expanded="false" class="flex items-center justify-center text-white bg-blue-700 rounded-full w-14 h-14 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:focus:ring-blue-800">
+       
+
+            <svg class="w-6 h-6 transition-transform group-hover:rotate-[135deg]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="m13.835 7.578-.005.007-7.137 7.137 2.139 2.138 7.143-7.142-2.14-2.14Zm-10.696 3.59 2.139 2.14 7.138-7.137.007-.005-2.141-2.141-7.143 7.143Zm1.433 4.261L2 12.852.051 18.684a1 1 0 0 0 1.265 1.264L7.147 18l-2.575-2.571Zm14.249-14.25a4.03 4.03 0 0 0-5.693 0L11.7 2.611 17.389 8.3l1.432-1.432a4.029 4.029 0 0 0 0-5.689Z"/>
+            </svg>
+            <span class="sr-only">Open actions menu</span>
+        </button>
+
+
+    </div>
+    
+    <div class="flex items-center fixed right-24 bottom-10">
+        <input checked id="checked-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+        <label for="checked-checkbox" class="ml-2 text-xl font-semibold  text-gray-900 dark:text-gray-300">Auto Rotate</label>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script type="module">
+        import {
+    ViewerApp,
+    AssetManagerPlugin,
+    GBufferPlugin,
+    timeout,
+    ProgressivePlugin,
+    TonemapPlugin,
+    SSRPlugin,
+    SSAOPlugin,
+    DiamondPlugin,
+    FrameFadePlugin,
+    GLTFAnimationPlugin,
+    GroundPlugin,
+    BloomPlugin,
+    TemporalAAPlugin,
+    AnisotropyPlugin,
+    GammaCorrectionPlugin,
+    Object3D, Material, 
+    Vector3, Vector2, 
+    Texture,
+
+    addBasePlugins,
+     TweakpaneUiPlugin, AssetManagerBasicPopupPlugin, CanvasSnipperPlugin, MeshStandardMaterial,
+
+   
+
+    // Color, // Import THREE.js internals
+    // Texture, // Import THREE.js internals
+} from "webgi";
+
+
+async function setupViewer(){
+
+    // Initialize the viewer
+    const viewer = new ViewerApp({
+        canvas: document.getElementById('webgi-canvas'),
+    })
+
+    // Add some plugins
+    const manager = await viewer.addPlugin(AssetManagerPlugin)
+
+    // Add a popup(in HTML) with download progress when any asset is downloading.
+    await viewer.addPlugin(AssetManagerBasicPopupPlugin)
+
+    // or use this to add all main ones at once.
+    await addBasePlugins(viewer)
+
+    // Add more plugins not available in base, like CanvasSnipperPlugin which has helpers to download an image of the canvas.
+    await viewer.addPlugin(CanvasSnipperPlugin)
+
+    // This must be called once after all plugins are added.
+    viewer.renderer.refreshPipeline()
+
+    let url =new URL( './public/car.glb', import.meta.url );
+    url = "" + url;
+  
+    
+    const model = await viewer.load(url)
+    const object3d = model.modelObject;
+
+
+
+
+
+    const Colors = document.querySelectorAll(".bodycolor");
+
+const object = viewer.scene.findObjectsByName('bodymaterial')[0].modelObject
+// console.log(object)
+let obj = viewer.createPhysicalMaterial({
+                color: 0xFF0000,
+                roughness: 0,
+                matalness : 0.8,
+             
+            })
+        
+            object.setMaterial(obj)
+
+for (const color of Colors) {
+    color.addEventListener('click', (e) => {
+        const backgroundColor = window.getComputedStyle(color).backgroundColor;
+     
+
+        // console.log(object, backgroundColor);
+
+        // console.log(startMaterial)
+    
+             obj = viewer.createPhysicalMaterial({
+                color: backgroundColor.toString(),
+                roughness: 0,
+                matalness : 0.8,
+             
+            })
+           
+            object.setMaterial(obj)
+
+            console.log(object.material)
+
+         
+        
+    });
+}
+
+
+ 
+ // Function to adjust the object's properties based on screen width
+
+// Initial adjustment
+// adjustObjectProperties();
+
+// Listen for window resize events and adjust object properties accordingly
+// window.addEventListener('resize', adjustObjectProperties);
+//   Camera 
+const controls = viewer.scene.activeCamera.controls;
+controls.maxDistance = 20
+controls.autoRotate=true
+
+const rotateCheckbox = document.getElementById("checked-checkbox"); // Make sure to replace "rotateCheckbox" with your actual element ID.
+
+rotateCheckbox.addEventListener("input", (e) => {
+  if (rotateCheckbox.checked) { // Check the checked property of the checkbox element
+    controls.autoRotate = true;
+  } else {
+    controls.autoRotate = false;
+  }
+  console.log("INPUT");
+});
+
+
+function update() {
+    window.requestAnimationFrame(update)
+    viewer.setDirty()
+}
+
+update()
+
+
+
+}
+
+setupViewer()
+
+const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mobileNav = document.getElementById("mobileNav");
+mobileMenuButton.addEventListener("click", ()=>{
+    mobileNav.classList.toggle("hidden");
+});
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+</body>
+</html>

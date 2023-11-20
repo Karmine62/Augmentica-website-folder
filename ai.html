@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Augmentica | AI</title>
+    <link rel="stylesheet" href="./src/tail.css">
+    <link rel="icon" type="image/png" href="./assets/icons/favicon.png">
+    <style>
+
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <div class="bg-[#F7F4F2] shadow-2xl w-full lg:w-screen flex-wrap lg:flex py-2 px-5 lg:px-12 flex-col lg:flex-row items-center  fixed z-40">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+      <a class=" w-auto flex title-font font-medium items-center text-gray-900 mb-4 lg:mb-0">
+        <img class="lg:w-48 md:w-28 " src="./assets/icons/logo.png" width="200px" alt="">
+      </a>
+      <!-- Hamburger Menu Icon -->
+      <div id="mobileMenuButton" class="lg:hidden cursor-pointer text-[#f78f53]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </div>
+    </div>
+  
+    <nav id="mobileNav" class="lg:ml-auto hidden  flex-wrap  flex justify-center items-center  text-base  gap-5 xl:gap-10 md:gap-2 lg:flex">
+  
+  
+      <a href="/index.html"><button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Home</button>
+      </a>
+  
+  
+      <!-- This is an example component -->
+      <div class="max-w-lg mx-auto">
+  
+  
+  
+  
+        <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown">Services <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg></button>
+  
+        <!-- Dropdown menu -->
+        <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown">
+  
+          <ul class="py-1" aria-labelledby="dropdown">
+            <li>
+              <a href="/services.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Overview</a>
+            </li>
+            <li>
+              <a href="/3dconfig.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+                Configurators</a>
+            </li>
+            <li>
+              <a href="/3dvisual.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">3D
+                Visualization</a>
+            </li>
+            <li>
+              <a href="/ar.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Augmented Reality</a>
+            </li>
+            <li>
+              <a href="/ai.html" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Artificial
+                Intelligence</a>
+            </li>
+          </ul>
+        </div>
+  
+      </div>
+      <div class="max-w-lg mx-auto">
+  
+  
+        <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" data-dropdown-toggle="dropdown2">Resources <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg></button>
+  
+  
+      <div class="hidden bg-white text-base z-50 list-none divide-y divide-gray-100 rounded shadow my-4" id="dropdown2">
+  
+      <ul class="py-1" aria-labelledby="dropdown">
+      
+        <a href="/faq.html#faq" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">FAQ</a>
+        </li>
+        <li>
+        <a href="/faq.html#otherservice" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">More Services</a>
+        </li>
+      
+      </ul>
+      </div>
+  
+      </div>
+  
+      <div class="max-w-lg mx-auto">
+  
+    <a href="./benefits.html">   <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Benefits </button>
+  </a> 
+   
+  
+      </div>
+      <div class="max-w-lg mx-auto">
+  
+     <a href="./process.html">  <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Process</button>
+   </a> 
+        <!-- Dropdown menu -->
+    
+  
+      </div>
+      <a href="/demo.html" class="mr-3 md:mr-5 cursor-pointer text-[#004586] font-semibold hover:text-gray-900">Demo
+        Gallery</a>
+  
+  
+      <a href="/contact.html"> <button class=" text-[#004586] font-semibold hover:text-gray-900 text-center inline-flex items-center" type="button" >Contact</button>
+      </a>
+  
+  
+      <button class="inline-flex items-center bg-[#FE8E5C] shadow-lg font-semibold text-white transition-all border-0 py-3 px-6 md:px-9 focus:outline-none hover:bg-gray-200 rounded-xl text-base mt-4 md:mt-0"><a href="./survey.html"">GET PRICING</a></button>
+    </nav>
+  </div>
+    
+  
+  <div class="w-screen h-screen flex items-center justify-center md:justify-start ">
+    
+    <video class="w-full h-full absolute object-cover -z-10" autoplay loop muted playsinline src="./assets/videos/retail-use-cases-loop-20-seconds.mp4" style="filter: brightness(50%);"></video>
+
+    
+    <section class="text-gray-600 body-font ">
+      <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center lg:ml-24">
+        <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 class="title-font sm:text-8xl text-3xl mb-4 font-bold text-white">Smart Solutions for Streamlined Workflows
+         
+          </h1>
+          <p class="mb-8 font-semibold  text-2xl text-zinc-300 ">Augmentica's AI, Computer Vision, and CRM solutions work seamlessly to enhance operational efficiency. Our AI automates repetitive tasks and allows you to create chatbots based on your stores data, while Computer Vision boosts employee efficiency and allows you to analyze customer interactions. Integrated with CRM, they elevate your business in various industries.</p>
+          <button
+          class="text-white font-semibold text-2xl py-4 px-7 transition-all rounded-xl bg-green-400 hover:bg-red-400"><a href="/ai.html#quote">Get a Quote</a></button>
+        </div>
+      
+      </div>
+    </section>
+    
+  </div>
+
+  <div class="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]" aria-hidden="true">
+        <defs>
+          <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+            <path d="M100 200V.5M.5 .5H200" fill="none" />
+          </pattern>
+        </defs>
+        <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+          <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+        </svg>
+        <rect width="100%" height="100%" stroke-width="0" fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+      </svg>
+    </div>
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <div class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div class="lg:pr-4">
+          <div class="lg:max-w-lg">
+          
+            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" id="ai-btnpath">Artificial Intelligence</h1>
+            <p class="mt-6 text-xl leading-8 text-gray-700">AI automation ensures your business adapts intelligently to changing demands, streamlining repetitive tasks seamlessly. Our CRM solutions provide valuable business insights, while our store-trained chatbots serve as your 24/7 virtual assistants, enhancing engagement, resolving queries, and taking your customer experience to new heights.</p>
+          </div>
+        </div>
+      </div>
+      <div class="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <img class="w-[25rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 md:w-[57rem]" src="./assets/images/retail-demographics-people-shopping.jpg" alt="">
+      </div>
+      <div class="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+        <div class="lg:pr-4">
+          <div class="max-w-xl text-base leading-7 text-gray-900 lg:max-w-lg">
+            <p>Augmentica easily combines AI automation, CRM, and store trained chatbots, boosting operational efficiency without the hassle. Our end-to-end setup manages updates and issues, making it a smooth ride for your business.</p>
+            <ul role="list" class="mt-8 space-y-8 text-gray-600">
+                <p class="text-base font-semibold leading-7 text-indigo-600">Benefits</p>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">Advanced Analytics</strong> Gain deeper insights into consumer behavior, product performance, and market trends, empowering informed decision-making with Augmentica's advanced analytical tools.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">Employee Efficiency</strong> Streamline workflows and automates routine tasks, enhancing employee productivity and enabling staff to focus on strategic initiatives.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                  <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
+                </svg>
+                <span><strong class="font-semibold text-gray-900">Customer Service</strong> Augmentica's solutions improve response times, resolve issues promptly, and personalize customer interactions, leading to enhanced customer satisfaction.</span>
+              </li>
+            </ul>
+            <p class="mt-8">Leading companies are diving into advanced technologies, and Augmentica provides the opportunity for businesses to join this league by embracing innovation early on. By implementing advanced tools for automation, enhanced analytics, and streamlined operations, companies can unlock the potential to scale, innovate, and stay ahead in a competitive landscape. Augmentica ensures a smooth transition to these advanced solutions, enabling businesses to mirror the success of leading enterprises in their industries.</p>
+     
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- ai STATS  -->
+  <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8 ">
+      <div class="max-w-2xl mx-auto text-center">
+          <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">AI Automation</h2>
+          <p class="mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">Augmentica's solutions are statistically proven, backed by extensive research and data analysis, ensuring tangible benefits for your business</p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-8 mt-19 text-center  lg:mt-24 sm:gap-x-8 md:grid-cols-2">
+          <div>
+              <h3 class="font-bold text-7xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400" data-counter-target="15" id="roi"> 0 </span><span class="text-3xl text-gray-900">%</span>
+              </h3>
+              <p class="mt-4 text-xl font-medium text-gray-900"> Increase in Revenue</p>
+              <p class="mt-2 font-sans text-slate-600">AI automation can contribute to a 10-15% increase in revenue for businesses by optimizing pricing, sales, and customer service.</p>
+      
+          </div>
+
+          <div>
+              <h3 class="font-bold text-7xl">
+                  <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-400" data-counter-target="40" id="click-rate"> 0 </span><span class="text-3xl text-gray-900">%</span>
+              </h3>
+              <p class="mt-4 text-xl font-medium text-gray-900">Productivity Increase</p>
+              <p class="mt-2 font-sans text-slate-600">AI automation can increase workplace productivity by up to 40%, potentially leading to significant efficiency improvements.
+              </p>
+      
+          </div>
+      </div>
+  </div>
+</section>
+<br>
+
+
+
+<!-- CV STATSSS //////////////////// -->
+
+
+
+
+
+
+
+<!-- Chat Bot ///////////////////// -->
+<hr>
+
+
+
+<!-- CHAT BOT -->
+
+<div class="flex justify-center items-center bg-sky-800 py-16">
+    <p class="text-white  text-center  text-4xl md:text-6xl font-semibold">Chat Bots</p>
+</div>
+
+<div  class="flex flex-col items-center w-screen  " id="chatbot">
+
+
+
+	
+	<section data-aos="fade-right" class="text-gray-600 body-font">
+	
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900"> Seamless assistance from trained shopping guides.
+			
+			</h1>
+      <br>
+			<p class="mb-8 leading-relaxed">Provide your e-commerce customers with personalized shopping experiences using our trained shopping guides. These expert assistants offer seamless and customized support, providing real-time tracking and informed suggestions to ensure confident purchasing decisions.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+			
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/storetrained.jpg">
+		  </div>
+		</div>
+	</section>
+
+	  
+	<section data-aos="fade-left" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">Enhanced HR Efficiency and Internal Communication through Chat Bots
+			
+			</h1>
+      <br>
+      <p class="mb-8 leading-relaxed">Let our chatbots manage your appointments, ensuring seamless bookings, changes, and cancellations. Additionally, they also assist in facilitating smoother internal HR communications by providing information on company policies and handling HR-related queries, fostering a more efficient workplace.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+			
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/business.jpg">
+		  </div>
+		</div>
+	  </section>
+
+
+
+
+	  <section data-aos="fade-right" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">
+        Elevate Sales through Chat Bot-Driven Lead Generation
+			</h1>
+      <br>
+			<p class="mb-8 leading-relaxed">Augmentica's chatbots are designed to assist in lead generation, engaging potential customers and guiding them to the most suitable resources. These smart bots analyze customer inquiries and behaviors to encourage engagement and lead them toward becoming valuable customers.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/aigenphoto.jpg">
+		  </div>
+		</div>
+      <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8 ">
+          <div class="max-w-2xl mx-auto text-center">
+              <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Chat Bot</h2>
+              <p class="mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">Augmentica's solutions are statistically proven, backed by extensive research and data analysis, ensuring tangible benefits for your business</p>
+          </div>
+  
+          <div class="grid grid-cols-1 gap-8 mt-10 text-center  lg:mt-24 sm:gap-x-8 md:grid-cols-3">
+              <div>
+                  <h3 class="font-bold text-7xl">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400" data-counter-target="38" id="roi"> 0 </span><span class="text-3xl text-gray-900">%</span>
+                  </h3>
+                  <p class="mt-4 text-xl font-medium text-gray-900">of consumers </p>
+                  <p class="mt-2 font-sans text-slate-600">prefer using AI-powered Shopping Assistants</p>
+          
+              </div>
+  
+              <div>
+                  <h3 class="font-bold text-7xl">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400" data-counter-target="35" id="click-rate"> 0 </span><span class="text-3xl text-gray-900">%</span>
+                  </h3>
+                  <p class="mt-4 text-xl font-medium text-gray-900">of online shoppers </p>
+                  <p class="mt-2 font-sans text-slate-600">are influenced by AI Shopping Assistants.
+                  </p>
+          
+              </div>
+  
+  
+              <div>
+                  <h3 class="font-bold text-7xl">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-cyan-400" data-counter-target="27" id="click-rate"> 0 </span><span class="text-3xl text-gray-900">%</span>
+                  </h3>
+                  <p class="mt-4 text-xl font-medium text-gray-900">Increase</p>
+                  <p class="mt-2 font-sans text-slate-600">in average order value when using personalized recommendations by AI Shopping Assistants.
+                  </p>
+          
+              </div>
+          </div>
+      </div>
+  </section>
+    
+    </section>
+    <!--?xml version="1.0" standalone="no"?-->              <svg class=" absolute -z-10 opacity-60 " id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">                    <defs>                         <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">                            <stop id="stop1" stop-color="rgba(255, 81.917, 0, 1)" offset="0%"></stop>                            <stop id="stop2" stop-color="rgba(255, 158.795, 0, 1)" offset="100%"></stop>                        </linearGradient>                    </defs>                <path fill="url(#sw-gradient)" d="M21,-36.1C27.5,-32.7,33,-27.5,37,-21.2C41,-14.8,43.5,-7.4,44.1,0.4C44.8,8.2,43.6,16.3,39.5,22.5C35.4,28.6,28.4,32.8,21.3,37C14.2,41.2,7.1,45.4,-0.3,45.9C-7.7,46.4,-15.3,43.1,-21.4,38.3C-27.5,33.6,-32,27.3,-36.3,20.7C-40.6,14.1,-44.6,7,-44.2,0.2C-43.9,-6.6,-39.1,-13.2,-34.2,-18.8C-29.3,-24.4,-24.4,-29,-18.6,-32.8C-12.9,-36.6,-6.5,-39.7,0.4,-40.4C7.3,-41.1,14.6,-39.5,21,-36.1Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>              </svg>
+	  
+	
+	  
+	</div>
+  <br>
+
+
+  <div class="flex justify-center items-center bg-sky-800 py-16">
+    <p class="text-white  text-center  text-4xl md:text-6xl font-semibold" id="cv-btnpath">Computer Vision</p>
+</div>
+
+
+<div  class="flex flex-col items-center w-screen  " id="chatbot">
+
+
+
+	
+	<section data-aos="fade-right" class="text-gray-600 body-font">
+	
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">Enhancing Worker Productivity through Computer Vision Monitoring
+			</h1>
+      <br>
+      <p class="mb-8 leading-relaxed">Augmentica utilizes Computer Vision for employee monitoring, deploying programmed cameras to observe and analyze work actions. This monitoring system enhances workplace productivity by tracking work efficiency, identifying issues, and ensuring better workflow management, ultimately leading to smoother operations and improved productivity.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+			
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/cvphotot.png">
+		  </div>
+		</div>
+	</section>
+
+	  
+	<section data-aos="fade-left" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row-reverse flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 md:ml-28 ml-0 items-center text-center ">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">Retail Optimization for Customer Interaction Insights via Computer Vision
+			
+			</h1>
+       <br>
+      <p class="mb-8 leading-relaxed">We use Computer Vision to optimize retail spaces, capturing and analyzing customer interactions and movement. This process pinpoints high-traffic areas and customer hotspots, allowing for strategic product placement and layout adjustments, ultimately enhancing customer engagement and increasing sales opportunities.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+			
+		  </div>
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/049228494.png">
+		  </div>
+		</div>
+	  </section>
+
+
+
+
+	  <section data-aos="fade-right" class="text-gray-600 body-font">
+		<div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+		  <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+			<h1 class="title-font sm:text-4xl text-3xl mb-1 font-medium text-gray-900">
+        Streamline Factory Operations with Mobile App-Integrated Computer Vision
+			</h1>
+      <br>
+			<p class="mb-8 leading-relaxed">Mobile App-Integrated Computer Vision optimizes factory operations by simplifying tasks such as stock counting and ensuring production efficiency. By reducing operational costs and improving workflow efficiency, this technology enhances the overall performance of your factory operations.</p>
+			<div class="flex justify-center">
+			  
+			</div>
+		  </div>
+
+		  <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+			<img class="object-cover object-center rounded-2xl" alt="hero" src="/assets/images/managment.jpg">
+		  </div>
+		</div>
+    </section>
+      <div class="max-w-5xl px-4 mx-auto sm:px-6 lg:px-8 ">
+          <div class="max-w-2xl mx-auto text-center">
+              <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Computer Vision </h2>
+              <p class="mt-3 text-xl leading-relaxed text-gray-600 md:mt-8">Augmentica's solutions are statistically proven, backed by extensive research and data analysis, ensuring tangible benefits for your business</p>
+          </div>
+    
+          <div class="grid grid-cols-1 gap-8 mt-10 text-center  lg:mt-24 sm:gap-x-8 md:grid-cols-2">
+              <div>
+                  <h3 class="font-bold text-7xl">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400" data-counter-target="90" id="roi"> 0 </span><span class="text-3xl text-gray-900">%</span>
+                  </h3>
+                  <p class="mt-4 text-xl font-medium text-gray-900"> More Efficient</p>
+                  <p class="mt-2 font-sans text-slate-600">Computer Vision in retail can increase operational efficiency by up to 90%, reducing labor costs and improving inventory management.</p>
+          
+              </div>
+    
+              <div>
+                  <h3 class="font-bold text-7xl">
+                      <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400" data-counter-target="60" id="click-rate"> 0 </span><span class="text-3xl text-gray-900">%</span>
+                  </h3>
+                  <p class="mt-4 text-xl font-medium text-gray-900">Reduction</p>
+                  <p class="mt-2 font-sans text-slate-600">Businesses that adopt Computer Vision can achieve cost reductions of up to 60%, offering a substantial competitive advantage.
+                  </p>
+          
+              </div>
+          </div>
+      </div>
+    </section>
+    
+    <hr>
+    
+    <svg class="absolute -z-10 opacity-60" id="sw-js-blob-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+          <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
+              <stop id="stop1" stop-color="#FF5733" offset="0%"></stop>
+              <stop id="stop2" stop-color="#FFA500" offset="100%"></stop>
+          </linearGradient>
+      </defs>
+      <path fill="url(#sw-gradient)" d="M21,-36.1C27.5,-32.7,33,-27.5,37,-21.2C41,-14.8,43.5,-7.4,44.1,0.4C44.8,8.2,43.6,16.3,39.5,22.5C35.4,28.6,28.4,32.8,21.3,37C14.2,41.2,7.1,45.4,-0.3,45.9C-7.7,46.4,-15.3,43.1,-21.4,38.3C-27.5,33.6,-32,27.3,-36.3,20.7C-40.6,14.1,-44.6,7,-44.2,0.2C-43.9,-6.6,-39.1,-13.2,-34.2,-18.8C-29.3,-24.4,-24.4,-29,-18.6,-32.8C-12.9,-36.6,-6.5,-39.7,0.4,-40.4C7.3,-41.1,14.6,-39.5,21,-36.1Z" width="100%" height="100%" transform="translate(50 50)" stroke-width="0" style="transition: all 0.3s ease 0s;" stroke="url(#sw-gradient)"></path>
+  </svg>
+  
+	
+	  
+	</div>
+  <br>
+
+  <section class="py-10 bg-gray-900 sm:py-16 lg:py-24">
+    <div class="max-w-6xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:items-stretch md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10">
+            <div class="flex flex-col justify-between lg:py-5">
+                <div>
+                    <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:leading-tight lg:text-5xl" id="quote">It’s time to build something exciting!</h2>
+                    <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white">Ready to embark on an exciting journey with AI, CV, and Chatbots? Send us a message with your ideas specifically about these innovative technologies, and let's turn your ideas into reality!</p>
+
+                    <img class="relative z-10 max-w-xs mx-auto -mb-16 md:hidden" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line-mobile.svg" alt="" />
+
+                    <img class="hidden w-full translate-x-24 translate-y-8 md:block" src="https://cdn.rareblocks.xyz/collection/celebration/images/contact/4/curve-line.svg" alt="" />
+                </div>
+              
+              <img src="./assets/icons/logo.png" alt="">
+             
+            </div>
+
+            <div class="lg:pl-12">
+                <div class="overflow-hidden bg-white rounded-md">
+                    <div class="p-6 sm:p-10">
+                        <h3 class="text-3xl font-semibold text-black">Get a free quote</h3>
+                        <p class="mt-4 text-base text-gray-600">Fill out the information below, providing details on how you envision utilizing these cutting-edge technologies, and let's get started on crafting a tailored solution for you.</p>
+
+                        <form action="https://formsubmit.co/43d93b8bbca5368218e27c5ecdf22fb8" method="POST" class="mt-4">
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="" class="text-base font-medium text-gray-900"> Your name </label>
+                                    <div class="mt-2.5 relative">
+                                        <input
+                                            type="text"
+                                            name="Name"
+                                            id=""
+                                            placeholder="Enter your full name"
+                                            class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="" class="text-base font-medium text-gray-900"> Email address </label>
+                                    <div class="mt-2.5 relative">
+                                        <input
+                                            type="text"
+                                            name="Email"
+                                            id=""
+                                            placeholder="Enter your full name"
+                                            class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500"
+                                        />
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="" class="text-base font-medium text-gray-900"> Project brief </label>
+                                    <div class="mt-2.5 relative">
+                                        <textarea
+                                            name="Project Brief"
+                                            id=""
+                                            placeholder="Enter your project brief"
+                                            class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 bg-white border border-gray-200 rounded-md resize-y focus:outline-none focus:ring-orange-500 focus:border-orange-500 caret-orange-500"
+                                            rows="4"
+                                        ></textarea>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="_next" value="https://thankyou-augmetica.netlify.app/">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div>
+
+                                    <button type="submit" class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 bg-orange-500 border border-transparent rounded-md focus:outline-none hover:bg-orange-600 focus:bg-orange-600">
+                                        Get Free Quote
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+ 
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+      
+
+<script src="./src/counter.min.js"></script>
+<script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
+<script>
+new Counter("#click-rate")
+new Counter("#roi")
+
+const mobileMenuButton = document.getElementById("mobileMenuButton");
+const mobileNav = document.getElementById("mobileNav");
+mobileMenuButton.addEventListener("click", ()=>{
+    mobileNav.classList.toggle("hidden");
+});
+
+
+</script>
+</body>
+</html>
